@@ -1,0 +1,456 @@
+/*------- colors -------*/
+/* brown: #9b6b20 */
+/* darker-brown: #765218 */
+
+
+/*------- fonts -------*/
+
+@font-face {
+
+  font-family: 'whhg';
+  src: url('/fonts/whhg/webhostinghub-glyphs.eot');
+  src: url('/fonts/whhg/webhostinghub-glyphs.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/whhg/webhostinghub-glyphs.ttf') format('truetype'),
+       url('/fonts/whhg/webhostinghub-glyphs.svg') format('svg');
+  src: url('/fonts/whhg/webhostinghub-glyphs.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+
+@font-face {
+
+  font-family: "Encient German Gothic";
+  src: url("/fonts/Encient_German_Gothic/Germgoth.eot?") format("eot"),
+       url("/fonts/Encient_German_Gothic/Germgoth.woff") format("woff"),
+       url("/fonts/Encient_German_Gothic/Germgoth.ttf") format("truetype"),
+       url("/fonts/Encient_German_Gothic/Germgoth.svg#EncientGermanGothic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[icon]::before {
+
+  content: attr(icon);
+  font-family: 'whhg';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+
+}
+
+/*------- general -------*/
+
+html, body {
+
+  width: 100%;
+  height: 100%;
+
+}
+
+body {
+
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font: 14px "微軟正黑體", "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #222;
+  line-height: 2em !important;
+  overflow: hidden;
+  
+}
+
+a {
+
+  text-decoration: none;
+
+}
+
+/*------- bootstrap -------*/
+
+.nav, .pagination, .carousel, .panel-title a {
+
+  cursor: pointer;
+
+}
+
+hr{
+
+  border-top: 1px solid #222 !important;
+
+}
+
+/*-----------------------*/
+/*------- landing -------*/
+/*-----------------------*/
+
+div#landing {
+
+  width: 100%;
+  height: 100%;
+  background: url("/images/ricepaper2.png") repeat;
+  position: relative;
+  z-index: 100;
+  
+  top: 0;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  -ms-transition: top 0.5s;
+  transition: top 0.5s;
+
+}
+
+div#landing::before {
+
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#fff 50%, #000);
+  opacity: 0.2;
+
+}
+
+div#landing.isContent {
+
+  top: -100%;
+
+}
+
+/*------- wrapper -------*/
+
+#title_wrapper {
+  
+  position: relative;
+  height: 73%;
+
+}
+
+#nav_wrapper {
+
+  position: relative;
+  height: 27%;
+  top: auto;
+  color: #222;
+  background-color: transparent;
+  opacity: 1;
+
+}
+
+.isContent #nav_wrapper {
+
+  height: 100px;
+  top: 27%;
+  color: #fff;
+  background-color: #222;
+  opacity: 0.8;
+
+  -webkit-transition: height top background-color opacity color 0.5s;
+  -moz-transition: height top background-color opacity color 0.5s;
+  -ms-transition: height top background-color opacity color 0.5s;
+  transition: height top background-color opacity color 0.5s;
+
+}
+
+/*------- title -------*/
+
+#title {
+
+  vertical-align: middle;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  height: 230px;
+  width: 500px;
+  color: #222;
+
+}
+
+#title > * {
+
+  float: left;
+  opacity: 0.7;
+
+}
+
+#logo {
+
+  height: 230px;
+
+}
+
+#logo img {
+
+  height: 230px;
+  width: auto;
+
+}
+
+#words {
+
+  position: relative;
+  padding: 80px 30px;
+
+}
+
+#words > * {
+
+  width: 100%;
+  line-height: 1.1em;
+
+}
+
+#words #name {
+
+  font-family: "Encient German Gothic";
+  font-size: 72px;
+  text-align: justify;
+
+}
+
+#words #subtitle {
+
+  font-family: "微軟正黑體";
+  font-size: 32px;
+  text-align: justify;
+
+}
+
+/*------- navbar -------*/
+
+#navbar {
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  height: 100px;
+  width: 630px;
+  text-align: justify;
+  
+}
+
+
+#navbar ul {
+
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+
+  list-style-type: none;
+  width: auto;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+
+}
+
+.isContent #navbar ul {
+
+  border: none;
+  -webkit-transition: border opacity 0.5s;
+  -moz-transition: border 0.5s;
+  -ms-transition: border 0.5s;
+  transition: border 0.5s;
+
+}
+
+.link {
+
+  float: left;
+  line-height: 100px;
+  font-size: 20px;
+  padding: 0px 23px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.7;
+
+}
+
+.link:hover {
+
+  opacity: 0.9;
+
+}
+
+/*-----------------------*/
+/*------- content -------*/
+/*-----------------------*/
+
+#content_wrapper {
+
+  position: fixed;
+  top: 0px;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0 0 0;
+
+}
+
+#content {
+
+  width: 100%;
+  height: 100%;
+  background: url("/images/ricepaper2.png") repeat;
+  overflow: scroll;
+
+}
+
+.content-bg::before {
+
+  width: 100%;
+  position: fixed;
+  left: 0;
+  text-align: center;
+  font-size: 480px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 0.08);  
+
+}
+
+div#landing::before {
+
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#fff 50%, #000);
+  opacity: 0.2;
+
+}
+
+/*------- news, info and faq -------*/
+
+#news, #faq, #info {
+
+  position: relative;
+  margin: 0 auto;
+  width: 630px;
+  padding: 50px 0 0 0;
+
+}
+
+#news p, #faq p, #info p {
+
+  padding: 10px 23px;
+
+}
+
+p.news-title, p.question, p.info-title {
+
+  font-size: 20px;
+
+}
+
+p.new-content, p.answer, p.info-paragraph {
+
+  color: #444;
+
+}
+
+.fb-page {
+
+  width: 630px;
+  position: relative;
+  margin: 50px auto;
+
+}
+
+iframe {
+
+  background-color: transparent;
+
+}
+
+#intro {
+
+  font-size: 18px;
+  line-height: 2em;
+
+}
+
+/*------- register -------*/
+
+#register {
+
+  width: 100%;
+  position: relative;
+  padding: 50px 10%;
+  text-align: justify;
+
+}
+
+#register div {
+
+  float: left;
+  position: relative;
+  height: 100%;
+  font-size: 16px;
+  color: #444;
+  line-height: 2em;
+
+}
+
+#register .step {
+
+  width: 29%;
+  margin: 0 2.1666%;
+
+}
+
+#register .step::before {
+
+  display: block;
+  text-align: center;
+  font-size: 72px;
+  line-height: 72px;
+  padding: 10px 0;
+
+}
+
+#register .arrow {
+
+  width: 8%;
+  height: 100%;
+
+}
+
+#register .arrow::before {
+
+  height: 100%;
+  font-size: 48px;
+  line-height: 100%;
+
+}
+
+#register h2 {
+
+  text-align: center;
+
+}
+
+#register strong {
+
+
+}
+
+

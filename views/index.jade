@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  #landing(ng-class="{isContent: isContent}" ng-controller="landingCtrl")
+    #title_wrapper
+      #title
+        #logo
+          img(src="images/frEEdom_logo.png")
+        #words
+          #name frEEdom
+          #subtitle 2014 台大電機營
+    #nav_wrapper
+      #navbar
+        ul
+          li.link(link ng-repeat="item in nav_items track by $index" 
+                  ng-click="toPage(item.state)" ng-bind="item.title")
+  #content_wrapper(ui-view ng-controller="contentCtrl")

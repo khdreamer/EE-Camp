@@ -1,0 +1,16 @@
+<!-- <accordion close-others="true">
+  <accordion-group heading="{{n.title}}" ng-repeat="n in news" is-open="false">
+    {{n.content}}
+  </accordion-group>
+</accordion> -->
+<div id="faq" class="content-bg" icon="pickaxe">
+  <div ng-repeat="q in faqs">
+    <hr ng-show="$index>0">
+    <p class="question" ng-bind="q.question"></p>
+    <p class="answer" ng-bind="p" ng-repeat="p in q.paragraphs"></p>
+  </div>
+</div>
+<div class="fb-page">
+
+<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebookDevelopers&amp;width=630&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=336813796436471" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:630px; height:590px;" allowTransparency="true"></iframe>
+</div>
