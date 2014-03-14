@@ -4,10 +4,12 @@
   </accordion-group>
 </accordion> -->
 <div id="news" class="content-bg" icon="dagger">
-  <div ng-repeat="n in news">
-    <hr ng-show="$index>0">
-    <p class="news-title" ng-bind="n.title"></p>
-    <p class="news-content" ng-bind="p" ng-repeat="p in n.paragraphs"></p>
+  <div class="text_wrapper">
+    <div ng-repeat="n in news">
+      <hr ng-show="$index>0">
+      <p class="news-title" ng-bind="n.title"></p>
+      <p class="news-content" ng-bind="p" ng-repeat="p in n.paragraphs"></p>
+    </div>
   </div>
 </div>
 <!-- <div class="fb-page"> -->

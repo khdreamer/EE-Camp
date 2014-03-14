@@ -1,11 +1,13 @@
 <div id="info" class="content-bg" icon="axe">
-  <div id="intro">
-    <p class="info-intro" ng-bind="p" ng-repeat="p in intro.paragraphs"></p>
-  </div>
-  <div ng-repeat="i in info">
-    <hr>
-    <p class="info-title" ng-bind="i.title"></p>
-    <p class="info-paragraph" ng-bind="p" ng-repeat="p in i.paragraphs"></p>
+  <div class="text_wrapper">
+    <div id="intro">
+      <p class="info-intro" ng-bind="p" ng-repeat="p in intro.paragraphs"></p>
+    </div>
+    <div ng-repeat="i in info">
+      <hr>
+      <p class="info-title" ng-bind="i.title"></p>
+      <p class="info-paragraph" ng-bind="p" ng-repeat="p in i.paragraphs"></p>
+    </div>
   </div>
 </div>
 <!-- <div class="fb-page"> -->

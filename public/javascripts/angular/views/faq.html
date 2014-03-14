@@ -4,10 +4,12 @@
   </accordion-group>
 </accordion> -->
 <div id="faq" class="content-bg" icon="pickaxe">
-  <div ng-repeat="q in faqs">
-    <hr ng-show="$index>0">
-    <p class="question" ng-bind="q.question"></p>
-    <p class="answer" ng-bind="p" ng-repeat="p in q.paragraphs"></p>
+  <div class="text_wrapper">
+    <div ng-repeat="q in faqs">
+      <hr ng-show="$index>0">
+      <p class="question" ng-bind="q.question"></p>
+      <p class="answer" ng-bind="p" ng-repeat="p in q.paragraphs"></p>
+    </div>
   </div>
 </div>
 <div class="fb-page">
