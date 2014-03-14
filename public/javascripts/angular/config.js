@@ -22,7 +22,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       onEnter: function($rootScope){
 
         $rootScope.isContent = true;
-        console.log("contentt");
+        console.log("content");
 
       }
     })
@@ -44,7 +44,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('content.faq', {
       url: "faq",
-      templateUrl: "/javascripts/angular/views/faq.html"
+      templateUrl: "/javascripts/angular/views/faq.html",
+      onEnter: function($rootScope){
+
+        $rootScope.isContent = true;
+        console.log("content");
+        // FB.XFBML.parse();
+        
+      }
     })
 });
 

@@ -1,18 +1,11 @@
-app.directive('chat', function () {
+app.directive('fbComment', function () {
   return {
-    restrict: "A",
+    restrict: "E",
     link: function (scope, element, attrs) {
+      // FB.XFBML.parse(element);
+      console.log("fbc");
 
-            element.bind("keydown keypress", function (event) {
-              if(event.which === 13) {
-                console.log("enter message");
-                socket.emit('message', {message: scope.message, user_name: scope.user_name});
-                scope.message = "";
-                console.log("message sent: " + (new Date()).getMilliseconds());
-                event.preventDefault();
-              }
-            });
-          }
+    },
+    template: '<div class="fb-comments" data-href="http://example.com/comments" data-width="630" data-numposts="5" data-colorscheme="light"></div>'
   }
-
 });

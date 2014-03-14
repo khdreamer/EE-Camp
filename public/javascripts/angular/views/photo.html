@@ -1,1 +1,16 @@
-<div>Photo</div>
+<div id="photo"><!--  class="content-bg" icon="axe"> -->
+  <!-- <imgbox></imgbox> -->
+  <div id="preview">
+    <div class="preview-frame" ng-repeat="i in photo_range" ng-click="showImage(i)">
+      <img ng-src="/images/gallary/photo_{{i}}.jpg">
+    </div>
+  </div>
+  <div id="imgbox" ng-show="show">
+    <div ng-click="prev()" icon="chevronleft" class="prev_btn"></div>
+    <div class="image_wrapper">
+      <img ng-src="/images/gallary/photo_{{photo_idx}}.jpg" alt="">
+      <div ng-click="close()" icon="\00d7" class="close_btn"></div>
+    </div>
+    <div ng-click="next()" icon="chevronright" class="next_btn"></div>
+  </div>
+</div>
