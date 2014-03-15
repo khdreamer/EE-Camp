@@ -4,7 +4,7 @@ app.controller('contentCtrl', function ($scope, $rootScope, $state) {
   $scope.faqs = faqs;
   $scope.info = info;
   $scope.intro = intro;
-  $rootScope.showImage = false;
+  $rootScope.isImageShown = false;
   const from = 201;
   const to = 275;
 
@@ -16,15 +16,14 @@ app.controller('contentCtrl', function ($scope, $rootScope, $state) {
   $scope.showImage = function(idx){
 
     $scope.photo_idx = idx;
-    $scope.show = true;
-    $rootScope.showImage = true;
+    $rootScope.isImageShown = true;
 
   }
 
   $scope.close = function(){
 
     $scope.show = false;
-    $rootScope.showImage = false;
+    $rootScope.isImageShown = false;
 
   }
 

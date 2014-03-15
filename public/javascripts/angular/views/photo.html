@@ -1,11 +1,10 @@
-<div id="photo"><!--  class="content-bg" icon="axe"> -->
-  <!-- <imgbox></imgbox> -->
+<div id="photo">
   <div id="preview">
     <div class="preview-frame" ng-repeat="i in photo_range" ng-click="showImage(i)">
       <img ng-src="/images/gallary/photo_{{i}}.jpg">
     </div>
   </div>
-  <div id="imgbox" ng-show="show">
+  <div id="imgbox" ng-show="isImageShown">
     <div ng-click="prev()" icon="chevronleft" class="prev_btn"></div>
     <div class="image_wrapper">
       <img ng-src="/images/gallary/photo_{{photo_idx}}.jpg" alt="">

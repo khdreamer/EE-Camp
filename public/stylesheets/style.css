@@ -78,12 +78,6 @@ a {
 
 /*------- bootstrap -------*/
 
-.nav, .pagination, .carousel, .panel-title a {
-
-  cursor: pointer;
-
-}
-
 hr{
 
   border-top: 1px solid #222 !important;
@@ -165,6 +159,7 @@ div#landing.isContent {
 .text_wrapper {
 
   position: absolute; /* firefox scrolling fix */
+  padding: 0 0 100px 0;
 
 }
 
@@ -389,9 +384,9 @@ iframe {
 
 #register {
 
-  width: 100%;
+  width: 80%;
   position: relative;
-  padding: 50px 10%;
+  padding: 50px 10% 100px 10%;
   text-align: justify;
 
 }
@@ -487,9 +482,7 @@ iframe {
 #imgbox {
 
   position: absolute;
-  /*overflow: scroll;*/
   top: 0;
-  /*padding: 100px 0 0 0;*/
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
@@ -498,12 +491,22 @@ iframe {
 
 }
 
+#imgbox::before {
+
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  
+}
+
 #imgbox .image_wrapper {
 
   position: relative;
   display: inline-block;
   width: auto;
-  margin: 0 auto;  
+  margin: 0 auto;
+  vertical-align: middle;
 
 }
 
@@ -578,9 +581,9 @@ iframe {
 
 }
 
-/*------- facebook plugin -------*/
+/*------- facebook and disqus plugin -------*/
 
-.fb-page {
+.fb-page, .disqus-box {
 
   width: 630px;
   position: relative;
