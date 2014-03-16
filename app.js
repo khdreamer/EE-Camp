@@ -19,7 +19,6 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(app.router);
 
 if ('development' == app.get('env')) {
   app.use(express.static(__dirname + '/public'));
@@ -31,6 +30,8 @@ if ('production' == app.get('env')) {
   app.use(express.static(__dirname + '/eecamp2014/public'));
   app.use(express.errorHandler());
 }
+
+app.use(app.router);
 
 app.get('/', routes.index);
 app.get('/users', user.list);
